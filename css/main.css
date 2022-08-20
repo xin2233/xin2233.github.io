@@ -729,7 +729,7 @@ img::-moz-selection {
     display: inline-block;
     margin-right: 0px;
     padding: 5px 5px 5px 5px;
-    font-size: .6em;
+    font-size: .9em;  /* 此處影響到左側邊界快捷欄： 【博客主頁，所有文章】 .9 應該是0.9 的意思 */
     text-shadow: none;
     color: #BF1827;
   }
@@ -744,7 +744,7 @@ img::-moz-selection {
     position: relative;
     width: 100%;
     border-color: #666;
-    color: #666;
+    color: #fff;  /* 此處影響到左側邊界快捷欄： 【博客主頁，所有文章】 */
     /*opacity: .8; */
   }
 
