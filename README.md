@@ -30,12 +30,7 @@
 
 在浏览器输入 [127.0.0.1:4000](127.0.0.1:4000) ， 就可以看到博客效果了。
 
-
-### 效果预览
-
-#### 头像效果
-
-![](http://xin2233.github.io/images/readme/icon.gif)
+### 头像效果
 
 如果你只想要我博客里的头像效果，你只需要拿 xin2233.github.io/_includes/side-panel.html 文件里面 `头像效果` 和 xin2233.github.io/css/main.css 里面最后面 `头像效果` 部分就行了。
 
