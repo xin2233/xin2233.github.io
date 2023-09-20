@@ -15,6 +15,14 @@ tags: jekyll
 
 　　Jekyll 是一个免费的简单静态网页生成工具，可以配合第三方服务例如： Disqus（评论）、多说(评论) 以及分享 等等扩展功能，Jekyll 可以直接部署在 Github（国外） 或 Coding（国内） 上，可以绑定自己的域名。[Jekyll中文文档](http://jekyll.bootcss.com/)、[Jekyll英文文档](https://jekyllrb.com/)、[Jekyll主题列表](http://jekyllthemes.org/)。
 
+### 安装ruby 环境
+
+第一次使用博客采用下面方法，要想采用此模板，则使用bundle来管理包比较好。
+
+```
+# ubuntu 2004
+sudo apt install -y ruby ruby-dev make gcc g++ zlib1g-dev
+```
 
 ### Jekyll 环境配置
 
