@@ -16,7 +16,7 @@ https://mp.weixin.qq.com/s?__biz=MzkxNTUwODgzNA==&mid=2247519003&idx=1&sn=c1c16c
 
 可能有些人始终不放心云服务，还是喜欢把文件存在本地，比如多个移动硬盘
 
-如果照片不多，这个备份问题还是很简单的，大不了每次更新了A硬盘，B硬盘直接覆盖粘贴![图片](https://mmbiz.qpic.cn/mmbiz_png/DOJuYmK6hwiayJkiawRuRic8Y3dG8lkib0LOkzZpjv7Q6cepzdh8icXLibGSicQdClNOkwzzFgW1zwE6p7mFdxbibx4MNQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+如果照片不多，这个备份问题还是很简单的，大不了每次更新了A硬盘，B硬盘直接覆盖粘贴
 
 但如果你的照片比较多，显然每次复制后覆盖粘贴是不明智的，那样太费时间了，一般都是选用**专门的备份软件**来解决
 
