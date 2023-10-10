@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      解决Django中checkbox复选框的传值问题
-link:       [https://www.cnblogs.com/zjxcyr/p/16773094.html](https://www.cnblogs.com/zjxcyr/p/16773094.html)
 date:       2022-10-09 17:48:00
 tag:        django
 description: ""
@@ -19,20 +18,20 @@ Django 中，html 页面通过 form 标签来传递表单数据。
 因此想要传递选中的多个值，需要用 request.POST.getlist() 函数
 
 该函数返回一个列表，可通过迭代来获取列表中每一项的值。
-```csharp 
+```csharp
     HTML code
     <form action="" method="POST">
-    
+
     <input type="checkbox" value="1" name="check_box_list"/>1
-    
+
     <input type="checkbox" value="2" name="check_box_list"/>2
-    
+
     <input type="checkbox" value="3" name="check_box_list"/>3
-    
+
     <input type="submit" value="提交"/>
     </form>
 ```
-```csharp 
+```csharp
     Python code
     def xxx(request):
     　　check_box_list = request.POST.getlist('check_box_list')

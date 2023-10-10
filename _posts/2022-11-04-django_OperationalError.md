@@ -1,7 +1,6 @@
 ---
 layout:     post
-title:       django.db.utils.OperationalError: (1050, "Table '表名' already exists
-link:       [https://www.cnblogs.com/zjxcyr/p/16859375.html](https://www.cnblogs.com/zjxcyr/p/16859375.html)
+title:      "django.db.utils.OperationalError: (1050, Table '表名' already exists"
 date:       2022-11-04 22:51:00
 tag:        django
 description: ""

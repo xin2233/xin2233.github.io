@@ -1,16 +1,15 @@
 ---
 layout:     post
-title:      KeyError: 'password1' forms.py问题
-link:       [https://www.cnblogs.com/zjxcyr/p/16443013.html](https://www.cnblogs.com/zjxcyr/p/16443013.html)
-date:       2022-07-04 15:11:00
+title:      "KeyErrorpasswordforms.py问题"
+date:       2022-07-04
 tag:        django
 description: ""
-
-
 ---
 
+## start
 ### 问题：
-```csharp 
+
+```
     Traceback (most recent call last):
       File "D:\doing\GIT\GitHub\Blog_Django\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
         response = get_response(request)
@@ -29,11 +28,12 @@ description: ""
       File "D:\doing\GIT\GitHub\Blog_Django\users\forms.py", line 46, in clean_password
         if self.cleaned_data['password'] != self.cleaned_data['password1']:
     KeyError: 'password1'
-    
+
 ```
 
 forms.py:
-```csharp 
+
+```
     class RegisterForm(forms.ModelForm):
         """注册表单"""
         email = forms.EmailField(label='邮箱', min_length=3, widget=forms.EmailInput(attrs={
@@ -42,11 +42,11 @@ forms.py:
             'class': 'form-contrl', 'placeholder': '密码'}))
         password2 = forms.CharField(label='再次输入密码', min_length=6, widget=forms.PasswordInput(attrs={
             'class': 'form-contrl', 'placeholder': '再次输入密码'}))
-    
+
         class Meta:
             model = User
             fields = ('email', 'password1')
-    
+
         def clean_email(self):
             """ 验证用户是否存在 """
             email = self.cleaned_data.get('email')
@@ -54,25 +54,25 @@ forms.py:
             if exists:
                 raise forms.ValidationError('邮箱已经存在!')
             return email
-    
+
         def clean_password1(self):
             """验证密码是否相等"""
             print(self.cleaned_data)
-            
+
             if self.cleaned_data['password1'] != self.cleaned_data['password2']:
                 raise forms.ValidationError('两次密码输入不一致！')
             return self.cleaned_data['password1']
-    
 ```
 
 register.html:
-```csharp 
+
+```html
      <form action="" method="post">
-                                {% csrf_token %}
+                                csrf_token
                                 {{ form.as_p }}
                                 <input type="submit" style="margin-top: 1em;" class="button is-link is-fullwidth" value="注 册">
     </form>
-    
+
 ```
 
 ### 原因分析：
