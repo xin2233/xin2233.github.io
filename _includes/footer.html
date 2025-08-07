@@ -90,6 +90,30 @@
             </nav>
         </div>
         <div class="footer_div">
+            <script>
+                /* 修改为你的建站 UTC 时间 */
+const START = new Date('2020-06-01T00:00:00Z');
+
+function fmt(n) { return n.toString().padStart(2, '0'); }
+
+function update() {
+  const diff = Date.now() - START;
+  const sec  = Math.floor(diff / 1000);
+
+  const year = Math.floor(sec / (365 * 24 * 3600));
+  const day  = Math.floor((sec % (365 * 24 * 3600)) / (24 * 3600));
+  const hour = Math.floor((sec % (24 * 3600)) / 3600);
+  const min  = Math.floor((sec % 3600) / 60);
+  const s    = sec % 60;
+
+  document.getElementById('run-time').textContent =
+    `本站已安全运行 ${year} 年 ${day} 天 ${fmt(hour)}:${fmt(min)}:${fmt(s)}`;
+}
+
+/* 首次渲染 + 每秒刷新 */
+update();
+setInterval(update, 1000);>
+            </script>
             <p class="copyright text-muted">
                 Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }} Theme by <a
                     href="https://github.com/xin2233/xin2233.github.io">xin2233</a> |
@@ -107,6 +131,8 @@
                   <span id="busuanzi_value_site_pv"></span>次
                 </span>
             </div>
+            <!-- 增加运行时间显示 -- >
+            <span id="run-time"></span>
         </div>
 <!--        23-09-20-增加看板娘-->
         <script src="/live2dw/lib/L2Dwidget.min.js"></script>
